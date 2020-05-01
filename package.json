@@ -23,7 +23,9 @@
     "changelog-lint": "commitlint --from master",
     "changelog-lint-from-stdin": "commitlint",
     "travis-pr-title-lint": "node ./scripts/travis-pr-title-lint",
-    "gen-contributing-toc": "doctoc CONTRIBUTING.md"
+    "gen-contributing-toc": "doctoc CONTRIBUTING.md",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "homepage": "https://github.com/mozilla/web-ext",
   "repository": {
@@ -76,7 +78,8 @@
     "update-notifier": "3.0.0",
     "watchpack": "1.6.0",
     "yargs": "13.2.4",
-    "zip-dir": "1.0.2"
+    "zip-dir": "1.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.5",
@@ -120,5 +123,6 @@
       "lcov",
       "text"
     ]
-  }
+  },
+  "snyk": true
 }
